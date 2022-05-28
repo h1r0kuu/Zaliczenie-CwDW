@@ -5,7 +5,7 @@ const app = express()
 const port = process.env.PORT || 8000
 
 app.get("/", (req, res) => {
-    res.send({test: "test"})
+    res.send({text: "Index page"})
 })
 
 app.get("/about", (req, res) => {
