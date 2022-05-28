@@ -1,15 +1,10 @@
 const route = require("express").Router()
+const controller = require("./controller")
 
-route.get("/", (req, res) => {
-    res.send({text: "Index page"})
-})
+route.get("/", controller.index)
 
-route.get("/about", (req, res) => {
-    res.send({text: "About us page"})
-})
+route.get("/about", controller.about)
 
-route.get("/service", (req, res) => {
-    res.send({text: "Service page"})
-})
+route.get("/service", controller.service)
 
 module.exports = route
